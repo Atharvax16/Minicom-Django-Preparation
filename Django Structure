@@ -1,0 +1,14 @@
+1.manage.py --> It's an small wrapper cmd utility that lets you run django commands for this project
+Instead of alling Django we call "python manage.py ...."
+
+2.)setting.py --> A configuration file that tells django how tht project behaves:installed apps,databsae,templates,static files,middleware,etc.
+Every request uses this settings,if an app is not in the installed_apps,django will ignore its mdoels,templates dirs,etc.
+
+3.1)urls.py(project and app routing) --> This the entry point for URL routing,pointed to by ROOT_URLCONF in settings.py
+It includes:Admin Path,One or more include() calls that delegate to app urls.py files.
+
+3.2)urls.py(ap level) --> Routes inside one specific app
+uses view function/classes from the app's views.py.
+
+4.)views.py --> contains view functions or classes that take a request and return a response 
+
