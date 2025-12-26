@@ -1,2 +1,8 @@
 Task 2
 -->Allow the user to add a new item (Foo / Bar / anything) from the webpage using a form.
+
+How POST works in Django
+Reading form data
+CSRF protection
+Saving to database
+Redirecting after POST (important pattern)
