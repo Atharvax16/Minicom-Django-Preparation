@@ -6,3 +6,9 @@ Reading form data
 CSRF protection
 Saving to database
 Redirecting after POST (important pattern)
+
+
+Thinking --> WE want the user to give input of something right by which they can give a input 
+1.POST method request
+2.saving to the database Table
+
