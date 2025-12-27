@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2> Add Items</h2>
+<form method = 'POST'>
+    {% csrf_token %}
+    <input type = 'text' name = 'name' placeholder = 'Enter item name'>
+    <button type = 'Submit'>Add</button>
+</form>
+
+<hr>
+
+<h2> Items </h2>
+
+{% for item in items %}
+  <p>{{ item.name }}</p>
+     <form method="POST" action="{% url 'delete' item.id %}">
+        {% csrf_token %}
+        <input
+            type="text"
+            name="name"
+            placeholder="Type '{{ item.name }}' to delete"
+        >
+        <button type="submit">Delete</button>
+    </form>
+{% empty %}
+  <p>No items yet</p>
+{% endfor %}
+
+</body>
+</html>
